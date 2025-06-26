@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- The viewport meta tag is crucial for responsive design. It sets the width of the viewport to the device's width and the initial zoom level. -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Great Talent Search Examination</title>
     <!-- Tailwind CSS CDN for styling -->
@@ -12,7 +13,7 @@
             font-family: 'Inter', sans-serif;
             background-color: #f7fafc; /* Light gray background */
             /* Added background image for books */
-            background-image: url('pexels-sarimphotos-1033729.jpg'); /* Placeholder image of books */
+            background-image: url('https://placehold.co/1920x1080/e0e0e0/555555?text=Books+Background'); /* Placeholder image of books */
             background-size: cover; /* Cover the entire background */
             background-position: center; /* Center the background image */
             background-attachment: fixed; /* Keep the background fixed during scroll */
@@ -28,15 +29,22 @@
 </head>
 <body class="bg-gray-100">
     <!-- Main container for the website content -->
+    <!-- 'w-full' makes it take full width on small screens, 'max-w-2xl' limits its max width on larger screens.
+         'p-8 md:p-12' applies different padding for mobile (p-8) and desktop (md:p-12). -->
     <div class="bg-white p-8 md:p-12 rounded-lg shadow-xl max-w-2xl w-full text-center border border-gray-200">
         <!-- Website Title -->
-        <h1 class="text-indigo-700 text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-            Talent Search Examination
+        <!-- 'text-4xl md:text-5xl' sets different font sizes for mobile (text-4xl) and desktop (md:text-5xl). -->
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+            <!-- Added gradient text for engaging color -->
+            <span class="bg-gradient-to-r from-indigo-600 to-purple-600 text-transparent bg-clip-text">The Great</span>
+            <span class="text-indigo-700">Talent Search</span>
+            <span class="bg-gradient-to-l from-purple-600 to-indigo-600 text-transparent bg-clip-text">Examination</span>
         </h1>
 
-        <!-- Introductory Paragraph -->
-        <p class="text-gray-700 text-lg md:text-xl mb-8 leading-relaxed">
-            Discover your potential and showcase your skills in our annual Talent Search Examination. This is your opportunity to shine!
+        <!-- Introductory Paragraph with changed color -->
+        <!-- 'text-lg md:text-xl' sets different font sizes for mobile (text-lg) and desktop (md:text-xl). -->
+        <p class="text-gray-800 text-lg md:text-xl mb-8 leading-relaxed">
+            <span class="text-purple-700 font-semibold">Discover your potential</span> and showcase your skills in our annual Talent Search Examination. This is your <span class="text-indigo-600 font-semibold">opportunity to shine!</span>
         </p>
 
         <!-- The "Register Now" button has been removed from here -->
@@ -58,6 +66,7 @@
         <!-- Section for Images of Students -->
         <div class="mt-10 pt-8 border-t border-gray-200">
             <h2 class="text-gray-800 text-2xl md:text-3xl font-bold mb-6">Glimpses from Previous Exams</h2>
+            <!-- 'grid grid-cols-1 md:grid-cols-2' makes the images stack in one column on mobile and display in two columns on desktop. -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Image 1 -->
                 <div class="rounded-lg overflow-hidden shadow-lg border border-gray-200">
@@ -66,11 +75,17 @@
                 </div>
                 <!-- Image 2 -->
                 <div class="rounded-lg overflow-hidden shadow-lg border border-gray-200">
-                    <img src="small.webp" alt="Student studying during exam" class="w-full h-auto object-cover">
+                    <img src="OIP.jpg" alt="Student studying during exam" class="w-full h-auto object-cover">
                     <p class="p-4 text-gray-700 text-base">Determined and ready to succeed.</p>
                 </div>
             </div>
         </div>
+
+        <!-- Footer Section -->
+        <footer class="mt-10 pt-6 border-t border-gray-200 text-gray-500 text-sm">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> The Great Talent Search Examination. All rights reserved.</p>
+            <p>Designed with <span class="text-red-500">&hearts;</span> for aspiring talents.</p>
+        </footer>
     </div>
 </body>
 </html>
